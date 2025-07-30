@@ -26,7 +26,7 @@
             transition: all 0.2s ease-in-out;
             display: flex;
             align-items: center;
-            min-height: 60px; /* Ensures consistent height */
+            min-height: 60px;
         }
         .option-label:hover {
             background-color: #eef2ff; /* indigo-50 */
@@ -51,8 +51,9 @@
         .explanation.visible {
             display: block;
         }
-        .hero-gradient {
-            background: linear-gradient(90deg, #4f46e5, #a855f7);
+        .marked-for-review {
+            background-color: #fef9c3; /* yellow-100 */
+            border-left-color: #facc15; /* yellow-400 */
         }
     </style>
 </head>
@@ -63,51 +64,33 @@
 
         <!-- Home Page -->
         <div id="home-page" class="page active-page">
-            <!-- Hero Section -->
             <div class="text-center p-8 md:p-12 mb-12 bg-white rounded-2xl shadow-lg">
                 <h1 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">PMP Certification Study Hub</h1>
                 <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Your comprehensive resource to master project management concepts and ace the PMP exam. Dive into realistic practice tests with instant, detailed feedback.</p>
             </div>
 
             <div class="max-w-6xl mx-auto">
-                <!-- About PMP Section -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg mb-12">
-                     <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">About the PMP Certification</h2>
-                     <p class="text-gray-700 text-base leading-relaxed">The Project Management Professional (PMP)® is the world's leading project management certification. It validates your competence to perform in the role of a project manager, leading and directing projects and teams. The exam covers a wide range of topics, including predictive, agile, and hybrid approaches, and is based on the Project Management Body of Knowledge (PMBOK® Guide). Achieving PMP certification demonstrates your experience, education, and skill to lead projects successfully, making you a sought-after professional in any industry.</p>
-                </div>
-                
-                <!-- Why Get Certified Section -->
-                <div class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why Get PMP Certified?</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                             <div class="bg-indigo-100 rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
-                                <svg class="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mt-5">Career Advancement</h3>
-                            <p class="text-gray-600 mt-2">Open doors to new opportunities and promotions in the project management field.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Core Project Management Methodologies</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        <div class="border-l-4 border-indigo-500 pl-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Predictive (Waterfall)</h3>
+                            <p class="text-gray-600 mt-2">A traditional, linear approach where project stages are completed sequentially. Best for projects with well-defined requirements and a stable scope.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                            <div class="bg-purple-100 rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
-                                <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.5A6.5 6.5 0 1012 5.5a6.5 6.5 0 000 13z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mt-5">Higher Earning Potential</h3>
-                            <p class="text-gray-600 mt-2">PMP certified professionals often earn a significantly higher salary than their non-certified peers.</p>
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Agile</h3>
+                            <p class="text-gray-600 mt-2">An iterative approach focused on flexibility and customer feedback. Work is broken into small increments (sprints). Ideal for projects where requirements are expected to change.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                            <div class="bg-teal-100 rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
-                                <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-semibold mt-5">Industry Recognition</h3>
-                            <p class="text-gray-600 mt-2">Gain global recognition and prove your skills and commitment to the profession.</p>
+                        <div class="border-l-4 border-teal-500 pl-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Hybrid</h3>
+                            <p class="text-gray-600 mt-2">A combination of predictive and agile methods. This approach uses the stability of predictive planning for some phases and the flexibility of agile for others.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Test Selection Section -->
                 <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Choose Your Practice Test</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div id="test-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Test Cards will be dynamically inserted here -->
                     </div>
                 </div>
@@ -116,28 +99,36 @@
 
         <!-- Test Page -->
         <div id="test-page" class="page">
-             <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+            <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                 <div>
                     <button onclick="showPage('home-page')" class="text-sm text-indigo-600 hover:underline mb-2 sm:mb-0">&larr; Back to Home</button>
                     <h1 id="test-title" class="text-3xl font-bold text-gray-900"></h1>
                 </div>
-                 <div id="question-counter" class="text-lg font-semibold text-gray-600 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md mt-2 sm:mt-0"></div>
+                <div class="flex items-center space-x-4">
+                    <div id="timer-display" class="text-lg font-bold text-indigo-600 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md"></div>
+                    <div id="question-counter" class="text-lg font-semibold text-gray-600 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md"></div>
+                </div>
             </header>
             
             <div id="quiz-container" class="min-h-[calc(100vh-300px)]">
                 <!-- Question will be dynamically inserted here -->
             </div>
 
-            <div id="navigation-container" class="mt-8 flex justify-between items-center">
+            <div id="navigation-container" class="mt-8 flex flex-wrap justify-between items-center gap-4">
                 <!-- Navigation buttons will be inserted here -->
             </div>
+            <div id="review-list-container" class="mt-4"></div>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results-page" class="page">
+            <!-- Results will be dynamically inserted here -->
         </div>
         
     </div>
 
     <script>
         // --- DATA SETS ---
-
 const mock1Data = [
     { "question": "M1Q1 A company is implementing agile methods. After a few sprints, communication problems develop. Some project team members are not getting along with others and this has led to the project being delayed by more than three weeks? What would have caused this issue?", "options": ["The PM plan is outdated", "Daily standup meeting is not being held", "The project sprint backlog has not been updated", "The project performance reports are not being created"], "answer": "Daily standup meeting is not being held", "explanation": "Daily standup meetings will ensure all team members are aligned and understand the purpose of the project. It will also allow them to communicate any issues they face on a day-to-day basis." },
     { "question": "M1Q2 A Project Manager realizes a major stakeholder's expectations are NOT being met, specifically regarding the project's budget. This may also cause a delay to the project. To resolve this issue, what should the project manager do?", "options": ["Update the risk register.", "Update the communications management plan.", "Update the scope baseline.", "Update the stakeholder engagement plan."], "answer": "Update the risk register.", "explanation": "The risk register will contain risks that may affect the project. The best resolution here would be to add this risk to the risk register with the corresponding response." },
@@ -513,7 +504,7 @@ const mock6Data = [
 const mock1impdata = [
   { "question": "Question 1: There has been a sharp increase in user complaints about the agile product development methods of a smartphone company. The smartphone manufacturer re-assessed the methods. An analysis of the complaints revealed that the users are trying to use some features in ways that the designers did not anticipate. How can this problem be prevented?", "options": ["A: Ask some of the users to test the product before it is launched.", "B: Create a detailed lessons-learned document so that these issues don't happen in future.", "C: Survey the users on how they will use the product.", "D: Ask your Dev team to keep end-users in mind."], "answer": "A: Ask some of the users to test the product before it is launched.", "explanation": "Let's use the elimination technique. Option D is out because this is something that would already be taken care of. Option B is not about prevention. Options A and C are both good choices, so you need to determine which is better. The survey can be good, but a better choice would be to ask the end-users to test the product." },
   { "question": "Question 2: We are 7 months into a strategic agile project. The Company Executives are closely monitoring its progress. The Project Director is frustrated about the last weekly burn-down charts depicting the project completion dates changing significantly several times. How can the project manager forecast the project completion date with more accuracy and stability?", "options": ["A: Lower the Frequency of Progress Reports shared with Senior Stakeholders.", "B: Inform the Executive Committee about the flexible nature of agile planning.", "C: Come up with planning variable-size iterations based on story complexity and load.", "D: Explain or elaborate on the upcoming backlog items in more detail with the team."], "answer": "D: Explain or elaborate on the upcoming backlog items in more detail with the team.", "explanation": "Inconsistent progress curve variations could result in inconsistent or uninformed story point estimates. Breaking down complex user stories is a must from time to time. Option B can be helpful but does not resolve the problem in the question. Similarly, option A is completely irrelevant. Variable size iterations are typically not done in agile. So option C is out as well." },
-  { "question": "Question 3: Mark is a project manager who is experienced in predictive methods. He is taking on an Agile Project for the first time. In order to seamlessly adjust to the shift from Predictive to Agile, Mark makes a Watchlist of situations that arise from insufficient actions as a servant leader. SELECT THREE situations that would result from a lack of Servant Leadership?", "options": ["A: Team Members don't communicate directly with other departments.", "B: Team members come up with impediments that they are unable to neutralize.", "C: Team Members don't take on challenging tasks.", "D: Project Stakeholders express skepticism over Agile Methods.", "E: Team's High Performers move to more senior positions."], "answer": "A: Team Members don't communicate directly with other departments., C: Team Members don't take on challenging tasks., D: Project Stakeholders express skepticism over Agile Methods.", "explanation": "A, C, and D are correct because Servant Leaders help promote professional development through challenges, help teams build bridges with external groups, andeducate stakeholders on Agile Business Value. B and E are incorrect because Servant Leaders support Personal Growth and Remove Impediments beyond the interests of the project." },
+  { "question": "Question 3: Mark is a project manager who is experienced in predictive methods. He is taking on an Agile Project for the first time. In order to seamlessly adjust to the shift from Predictive to Agile, Mark makes a Watchlist of situations that arise from insufficient actions as a servant leader. SELECT THREE situations that would result from a lack of Servant Leadership?", "options": ["A: Team Members don't communicate directly with other departments.", "B: Team members come up with impediments that they are unable to neutralize.", "C: Team Members don't take on challenging tasks.", "D: Project Stakeholders express skepticism over Agile Methods.", "E: Team's High Performers move to more senior positions."], "answer": "A: Team Members don't communicate directly with other departments., C: Team Members don't take on challenging tasks., D: Project Stakeholders express skepticism over Agile Methods.", "explanation": "A, C, and D are correct because Servant Leaders help promote professional development through challenges, help teams build bridges with external groups, andeducate stakeholders on Agile Business Value. B and E are incorrect because Servant Leaders support Personal Growth and Remove Impediments beyond the interests of the project.","isMultipleChoice": true },
   { "question": "Question 4: Jason is a new team member who is unaccustomed to Agile practices. An Operations Engineer often criticized Jason's work. Jason becomes nervous when the Operations Engineer appears in the morning standup meeting. Which of the following could justify the Project Manager's invitation to the Operations Engineer?", "options": ["A: All team members are important and we should not ignore anyone.", "B: Team Members' performance will become better.", "C: The Project Manager will be able to learn more about the Operations Engineer.", "D: It will help the project to get back on track."], "answer": "A: All team members are important and we should not ignore anyone.", "explanation": "It is a good Agile Practice to proactively seek inputs from different stakeholders ensuring transparency in project communications. The wrong options do not promote direct communication or the promotion of trust." },
   { "question": "Question 5: There have been several incomplete stories at the end of an iteration. Multiple Team Members worked on these stories and there were no blockers identified. Which of the following options can the Agile Team use to resolve the situation?", "options": ["A: Make use of the next Iteration to come out with a team spike that would help determine the feasibility of completing the planned user stories.", "B: Place the stories in the blocked column and work with the Product Owner to remove the impediments.", "C: Proceed with breaking down the stories further in the backlog by working with the Product Owner.", "D: Insert the stories back into the product backlog and wait for a less intensive iteration to work on them."], "answer": "C: Proceed with breaking down the stories further in the backlog by working with the Product Owner.", "explanation": "The chief reason behind not being able to complete a story within one iteration is that the story cannot be broken down into small enough goals. The incorrect options don't address the root cause by waiting or placing them in the blocked column. Also, the Product Owner cannot remove impediments if they are not identified and analyzed. Also, reserving the full team for a Spike is inefficient and bypasses the normal backlog refinement process." },
   { "question": "Question 6: You are in charge of an Agile Team that has shown impressive progress in the first four iterations. However, in the fifth iteration the progress has slowed without any apparent reason. What will you do as a next step?", "options": ["A: Work with the team to find the root cause of the issue.", "B: Remove the underperforming team member who is slowing things down.", "C: No action is needed as the team has moved onto norming stage from storming,", "D: No action is needed as the team happened to work low-complexity user stories in the first four iterations."], "answer": "A: Work with the team to find the root cause of the issue.", "explanation": "By completing less complex stories than more complex ones, some Agile Teams want to favor faster progress, Product Backlog Prioritization should be value-based and not speed-based. The first logical step would be to find the root cause of the problem. Also, if there happened to be a low performer, he/she would have had become apparent in earlier iterations. Furthermore, the Team happens to be Autonomous (post-Norming)." },
@@ -711,106 +702,115 @@ const mock3impdata = [
             { data: mock5Data, title: 'Practice Test 5', key: 'pmp-test-5', color: 'sky' },
             { data: mock6Data, title: 'Practice Test 6', key: 'pmp-test-6', color: 'rose' },
 			
-        ];
+        ];        
+
         
         // --- GLOBAL STATE ---
         let currentQuizData = [];
         let currentQuestionIndex = 0;
         let userAnswers = [];
+        let markedForReview = [];
         let currentTestKey = '';
-        let currentQuestionIndexKey = '';
+        let currentTestTitle = '';
+        let testTimerInterval;
+        const PASSING_PERCENTAGE = 70;
 
-        // --- WRAPPER FUNCTION TO START A TEST ---
-        function startTestWrapper(index) {
-            const test = allTests[index];
-            startTest(test.data, test.title, test.key);
-        }
-
-        // --- DYNAMICALLY CREATE TEST CARDS ON HOME PAGE ---
-        function createTestCards() {
-            const container = document.querySelector('#home-page .grid.md\\:grid-cols-3');
-            container.innerHTML = ''; // Clear existing
-            allTests.forEach((test, index) => {
-                const isComingSoon = test.data.length === 0;
-                const card = `
-                    <div class="border border-t-4 border-t-${test.color}-500 rounded-xl p-6 hover:shadow-xl transition-all flex flex-col ${isComingSoon ? 'opacity-60' : ''}">
-                        <h3 class="text-xl font-semibold text-gray-900">${test.title}</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">${isComingSoon ? 'New questions coming soon!' : `A 60-question test with realistic PMP scenarios.`}</p>
-                        <button onclick="startTestWrapper(${index})" 
-                                class="mt-4 w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-${test.color}-600 hover:bg-${test.color}-700 ${isComingSoon ? 'cursor-not-allowed bg-gray-400 hover:bg-gray-400' : ''}"
-                                ${isComingSoon ? 'disabled' : ''}>
-                            ${isComingSoon ? 'Coming Soon' : 'Start or Continue'}
-                        </button>
-                    </div>
-                `;
-                container.innerHTML += card;
-            });
-        }
-        
         // --- LOCAL STORAGE FUNCTIONS ---
-        function saveAnswersToStorage() {
-            localStorage.setItem(currentTestKey, JSON.stringify(userAnswers));
-        }
-
-        function loadAnswersFromStorage() {
-            const savedAnswers = localStorage.getItem(currentTestKey);
-            userAnswers = savedAnswers ? JSON.parse(savedAnswers) : new Array(currentQuizData.length).fill(null);
-        }
+        const getStorageKey = (keySuffix) => `${currentTestKey}-${keySuffix}`;
         
-        function saveQuestionIndex() {
-            localStorage.setItem(currentQuestionIndexKey, currentQuestionIndex);
+        function saveStateToStorage() {
+            localStorage.setItem(getStorageKey('answers'), JSON.stringify(userAnswers));
+            localStorage.setItem(getStorageKey('review'), JSON.stringify(markedForReview));
+            localStorage.setItem(getStorageKey('index'), currentQuestionIndex);
         }
 
-        function loadQuestionIndex() {
-            const savedIndex = localStorage.getItem(currentQuestionIndexKey);
+        function loadStateFromStorage() {
+            const savedAnswers = localStorage.getItem(getStorageKey('answers'));
+            userAnswers = savedAnswers ? JSON.parse(savedAnswers) : new Array(currentQuizData.length).fill(null);
+
+            const savedReview = localStorage.getItem(getStorageKey('review'));
+            markedForReview = savedReview ? JSON.parse(savedReview) : [];
+
+            const savedIndex = localStorage.getItem(getStorageKey('index'));
             currentQuestionIndex = savedIndex ? parseInt(savedIndex, 10) : 0;
         }
 
-        // --- PAGE NAVIGATION ---
+        // --- PAGE NAVIGATION & TIMER CONTROL ---
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active-page'));
             document.getElementById(pageId).classList.add('active-page');
             window.scrollTo(0, 0);
+
+            // Stop the timer if we navigate away from the test page
+            if (pageId !== 'test-page') {
+                clearInterval(testTimerInterval);
+            }
         }
 
         // --- QUIZ LOGIC ---
-        function startTest(quizData, testTitle, testKey) {
-            if (!quizData || quizData.length === 0) return; // Do not start empty tests
-            currentQuizData = quizData;
-            currentTestKey = testKey + '-answers';
-            currentQuestionIndexKey = testKey + '-index';
-            document.getElementById('test-title').textContent = testTitle;
+        function startTest(testIndex) {
+            const test = allTests[testIndex];
+            if (!test.data || test.data.length === 0) return;
             
-            loadAnswersFromStorage();
-            loadQuestionIndex();
+            currentQuizData = test.data;
+            currentTestKey = test.key;
+            currentTestTitle = test.title;
             
+            document.getElementById('test-title').textContent = currentTestTitle;
+            
+            loadStateFromStorage();
             renderQuestion(currentQuestionIndex);
+            startTimer(60); // Start a 60-minute timer
             showPage('test-page');
         }
 
         function renderQuestion(index) {
             const quizContainer = document.getElementById('quiz-container');
-            quizContainer.innerHTML = ''; // Clear previous question
+            quizContainer.innerHTML = '';
             
             const data = currentQuizData[index];
             if (!data) return;
 
+            const isMarked = markedForReview.includes(index);
             const card = document.createElement('div');
-            card.className = 'bg-white p-6 rounded-xl shadow-md';
+            card.className = `bg-white p-6 rounded-xl shadow-md border-l-4 ${isMarked ? 'marked-for-review' : 'border-transparent'}`;
             card.id = `card-q${index}`;
             
-            const questionHeader = document.createElement('h3');
-            questionHeader.className = 'text-lg font-semibold mb-5 text-gray-800';
-            questionHeader.innerHTML = data.question;
-            card.appendChild(questionHeader);
+            const questionHeaderContainer = document.createElement('div');
+            questionHeaderContainer.className = 'flex justify-between items-start mb-5';
+            
+            const questionText = document.createElement('h3');
+            questionText.className = 'text-lg font-semibold text-gray-800 flex-1';
+            questionText.innerHTML = data.question;
+            questionHeaderContainer.appendChild(questionText);
+            
+            const questionActions = document.createElement('div');
+            questionActions.className = 'flex items-center space-x-2 ml-4';
+            
+            const reviewButton = document.createElement('button');
+            reviewButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>`;
+            reviewButton.className = `p-2 rounded-full transition ${isMarked ? 'bg-yellow-400 text-white' : 'bg-gray-200 text-gray-600 hover:bg-yellow-200'}`;
+            reviewButton.title = 'Mark for Review';
+            reviewButton.onclick = () => toggleReview(index);
+            questionActions.appendChild(reviewButton);
+
+            const emailButton = document.createElement('a');
+            emailButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>`;
+            emailButton.className = 'p-2 rounded-full bg-gray-200 text-gray-600 hover:bg-blue-200 transition';
+            emailButton.title = 'Email about this question';
+            emailButton.href = `mailto:r.r.com1@gmail.com?subject=Query about ${currentTestTitle} - Question ${index + 1}&body=I have a question about the following:%0D%0A%0D%0A"${encodeURIComponent(data.question)}"`;
+            questionActions.appendChild(emailButton);
+
+            questionHeaderContainer.appendChild(questionActions);
+            card.appendChild(questionHeaderContainer);
 
             const optionsContainer = document.createElement('div');
             optionsContainer.className = 'space-y-3';
             optionsContainer.id = `options-q${index}`;
             
-            if (data.isMatching) {
+             if (data.isMatching) {
                 const descriptions = data.options;
-                const terms = Object.keys(data.answer).map(key => data.answer[key]);
+                const terms = Object.values(data.answer);
                 
                 descriptions.forEach((desc) => {
                     const matchGroup = document.createElement('div');
@@ -876,11 +876,7 @@ const mock3impdata = [
             const explanationContainer = document.createElement('div');
             explanationContainer.id = `explanation-q${index}`;
             explanationContainer.className = 'explanation mt-4';
-            explanationContainer.innerHTML = `
-                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-indigo-300">
-                    <h4 class="text-md font-semibold text-gray-800">Explanation:</h4>
-                    <p class="text-sm text-gray-600 mt-1">${data.explanation}</p>
-                </div>`;
+            explanationContainer.innerHTML = `<div class="p-4 bg-gray-50 rounded-lg border-l-4 border-indigo-300"><h4 class="text-md font-semibold text-gray-800">Explanation:</h4><p class="text-sm text-gray-600 mt-1">${data.explanation}</p></div>`;
             card.appendChild(explanationContainer);
             
             const actionContainer = document.createElement('div');
@@ -905,27 +901,7 @@ const mock3impdata = [
 
             renderNavigation();
         }
-
-        function restoreAnswerState(index) {
-            const data = currentQuizData[index];
-            const answer = userAnswers[index];
-            if (data.isMatching) {
-                Object.keys(answer).forEach(desc => {
-                    const select = document.querySelector(`#card-q${index} select[data-description="${desc}"]`);
-                    if (select) select.value = answer[desc];
-                });
-            } else {
-                const inputs = document.querySelectorAll(`#card-q${index} input[name="q${index}"]`);
-                inputs.forEach(input => {
-                    if (data.isMultipleChoice) {
-                        if (answer.includes(input.value)) input.checked = true;
-                    } else {
-                        if (input.value === answer) input.checked = true;
-                    }
-                });
-            }
-        }
-
+        
         function renderNavigation() {
             const navContainer = document.getElementById('navigation-container');
             navContainer.innerHTML = '';
@@ -941,11 +917,19 @@ const mock3impdata = [
             }
             navContainer.appendChild(prevButton);
 
+            if (markedForReview.length > 0) {
+                const reviewButton = document.createElement('button');
+                reviewButton.textContent = `View Reviewed (${markedForReview.length})`;
+                reviewButton.onclick = toggleReviewList;
+                reviewButton.className = `${btnBaseClass} border-transparent text-white bg-yellow-500 hover:bg-yellow-600`;
+                navContainer.appendChild(reviewButton);
+            }
+
             const nextButton = document.createElement('button');
             if (currentQuestionIndex === currentQuizData.length - 1) {
                 nextButton.textContent = 'Finish Test';
                 nextButton.className = `${btnBaseClass} border-transparent text-white bg-green-600 hover:bg-green-700`;
-                nextButton.onclick = () => showPage('home-page');
+                nextButton.onclick = calculateAndShowResults;
             } else {
                 nextButton.textContent = 'Next →';
                 nextButton.className = `${btnBaseClass} border-transparent text-white bg-indigo-600 hover:bg-indigo-700`;
@@ -955,10 +939,176 @@ const mock3impdata = [
             
             document.getElementById('question-counter').textContent = `Question ${currentQuestionIndex + 1} of ${currentQuizData.length}`;
         }
+
+        // --- NEW & UPDATED FUNCTIONS ---
+
+        function startTimer(durationInMinutes) {
+            clearInterval(testTimerInterval);
+            const timerDisplay = document.getElementById('timer-display');
+            let timer = durationInMinutes * 120;
+
+            testTimerInterval = setInterval(() => {
+                let minutes = parseInt(timer / 60, 10);
+                let seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                timerDisplay.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(testTimerInterval);
+                    alert("Time's up! Your test will now be submitted.");
+                    calculateAndShowResults();
+                }
+            }, 1000);
+        }
+
+        function calculateAndShowResults() {
+            clearInterval(testTimerInterval); // Stop the timer
+            let correct = 0;
+            let incorrect = 0;
+            let unanswered = 0;
+
+            userAnswers.forEach((answer, index) => {
+                if (answer === null || (Array.isArray(answer) && answer.length === 0) || (typeof answer === 'object' && answer !== null && Object.keys(answer).length === 0)) {
+                    unanswered++;
+                    return;
+                }
+                
+                const questionData = currentQuizData[index];
+                let isCorrect = false;
+
+                if (questionData.isMatching) {
+                    isCorrect = Object.keys(questionData.answer).every(key => answer[key] === questionData.answer[key]);
+                } else if (questionData.isMultipleChoice) {
+                    const correctAnswers = new Set(questionData.answer);
+                    const userAnswersSet = new Set(answer);
+                    isCorrect = correctAnswers.size === userAnswersSet.size && [...correctAnswers].every(val => userAnswersSet.has(val));
+                } else {
+                    isCorrect = answer === questionData.answer;
+                }
+
+                if (isCorrect) correct++;
+                else incorrect++;
+            });
+
+            const total = currentQuizData.length;
+            const score = total > 0 ? (correct / total) * 100 : 0;
+            const passed = score >= PASSING_PERCENTAGE;
+            const currentTestIndex = allTests.findIndex(t => t.key === currentTestKey);
+
+            const resultsContainer = document.getElementById('results-page');
+            resultsContainer.innerHTML = `
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <h1 class="text-4xl font-extrabold text-gray-900">Test Results: ${currentTestTitle}</h1>
+                    <div class="mt-8 text-6xl font-bold ${passed ? 'text-green-500' : 'text-red-500'}">${score.toFixed(1)}%</div>
+                    <p class="text-2xl font-semibold mt-2">${passed ? 'Congratulations, you passed!' : 'Keep practicing!'}</p>
+                    <p class="text-gray-600">Passing score: ${PASSING_PERCENTAGE}%</p>
+
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-lg">
+                        <div class="bg-green-100 p-4 rounded-lg">
+                            <div class="font-bold text-3xl text-green-700">${correct}</div>
+                            <div class="text-green-800">Correct</div>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg">
+                            <div class="font-bold text-3xl text-red-700">${incorrect}</div>
+                            <div class="text-red-800">Incorrect</div>
+                        </div>
+                        <div class="bg-gray-200 p-4 rounded-lg">
+                            <div class="font-bold text-3xl text-gray-700">${unanswered}</div>
+                            <div class="text-gray-800">Not Attempted</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 flex justify-center space-x-4">
+                        <button onclick="showPage('home-page')" class="px-8 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50">Back to Home</button>
+                        <button onclick="retryTest(${currentTestIndex})" class="px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">Retry Test</button>
+                    </div>
+                </div>
+            `;
+            showPage('results-page');
+        }
+
+        function retryTest(testIndex) {
+            const testToRetry = allTests[testIndex];
+            if (!testToRetry) return;
+
+            const testKey = testToRetry.key;
+            localStorage.removeItem(`${testKey}-answers`);
+            localStorage.removeItem(`${testKey}-review`);
+            localStorage.removeItem(`${testKey}-index`);
+
+            // Now start the test fresh
+            startTest(testIndex);
+        }
+
+        function toggleReview(index) {
+            const reviewIndex = markedForReview.indexOf(index);
+            if (reviewIndex > -1) {
+                markedForReview.splice(reviewIndex, 1);
+            } else {
+                markedForReview.push(index);
+                markedForReview.sort((a, b) => a - b);
+            }
+            saveStateToStorage();
+            renderQuestion(index); // Re-render to update button style
+        }
+
+        function toggleReviewList() {
+            const container = document.getElementById('review-list-container');
+            if (container.innerHTML !== '') {
+                container.innerHTML = '';
+                return;
+            }
+            const list = document.createElement('div');
+            list.className = 'p-4 bg-yellow-50 border border-yellow-200 rounded-lg mt-4';
+            list.innerHTML = `<h4 class="font-semibold mb-2">Questions Marked for Review:</h4>`;
+            const links = document.createElement('div');
+            links.className = 'flex flex-wrap gap-2';
+            markedForReview.forEach(qIndex => {
+                const link = document.createElement('button');
+                link.textContent = qIndex + 1;
+                link.className = 'w-10 h-10 rounded-md bg-yellow-200 hover:bg-yellow-300 font-semibold text-yellow-800';
+                link.onclick = () => {
+                    currentQuestionIndex = qIndex;
+                    renderQuestion(qIndex);
+                };
+                links.appendChild(link);
+            });
+            list.appendChild(links);
+            container.appendChild(list);
+        }
+
+        function createTestCards() {
+            const container = document.getElementById('test-cards-container');
+            container.innerHTML = '';
+            allTests.forEach((test, index) => {
+                const isComingSoon = test.data.length === 0;
+                const card = document.createElement('div');
+                card.className = `border border-t-4 border-t-${test.color}-500 rounded-xl p-6 bg-white hover:shadow-xl transition-all flex flex-col ${isComingSoon ? 'opacity-60' : ''}`;
+                card.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-900">${test.title}</h3>
+                    <p class="text-gray-600 mt-2 flex-grow">${isComingSoon ? 'New questions coming soon!' : `${test.data.length} realistic PMP scenarios.`}</p>
+                    <button onclick="startTest(${index})" 
+                            class="mt-4 w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-${test.color}-600 hover:bg-${test.color}-700 ${isComingSoon ? 'cursor-not-allowed bg-gray-400 hover:bg-gray-400' : ''}"
+                            ${isComingSoon ? 'disabled' : ''}>
+                        ${isComingSoon ? 'Coming Soon' : 'Start Test'}
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
         
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            createTestCards();
+        });
+
+        // --- Utility functions ---
         function navigate(direction) {
             currentQuestionIndex += direction;
-            saveQuestionIndex();
+            saveStateToStorage();
             renderQuestion(currentQuestionIndex);
         }
 
@@ -968,9 +1118,8 @@ const mock3impdata = [
 
         function processAnswer(index, isRestoring = false) {
             if (!isRestoring) {
-                saveAnswersToStorage();
+                saveStateToStorage();
             }
-
             const data = currentQuizData[index];
             const optionsContainer = document.getElementById(`options-q${index}`);
             const explanationContainer = document.getElementById(`explanation-q${index}`);
@@ -987,7 +1136,7 @@ const mock3impdata = [
                     select.classList.add(isCorrect ? 'correct' : 'incorrect');
                 });
             } else {
-                 const inputs = optionsContainer.querySelectorAll('input');
+                const inputs = optionsContainer.querySelectorAll('input');
                 inputs.forEach(input => {
                     const label = input.nextElementSibling;
                     const isCorrectAnswer = data.isMultipleChoice ? data.answer.includes(input.value) : data.answer === input.value;
@@ -1000,9 +1149,28 @@ const mock3impdata = [
             }
             explanationContainer.classList.add('visible');
         }
-        
-        // Initial setup
-        document.addEventListener('DOMContentLoaded', createTestCards);
+
+        function restoreAnswerState(index) {
+            const data = currentQuizData[index];
+            const answer = userAnswers[index];
+            if (answer === null) return;
+
+            if (data.isMatching) {
+                Object.keys(answer).forEach(desc => {
+                    const select = document.querySelector(`#card-q${index} select[data-description="${desc}"]`);
+                    if (select) select.value = answer[desc];
+                });
+            } else {
+                const inputs = document.querySelectorAll(`#card-q${index} input[name="q${index}"]`);
+                inputs.forEach(input => {
+                    if (data.isMultipleChoice) {
+                        if (answer.includes(input.value)) input.checked = true;
+                    } else {
+                        if (input.value === answer) input.checked = true;
+                    }
+                });
+            }
+        }
 
     </script>
 </body>

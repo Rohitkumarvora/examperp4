@@ -285,7 +285,7 @@ const mock2Data = [
     { "question": "M2Q57: A project manager has been alerted by a key stakeholder on a recently approved project that the project management method is not sufficient for the project. What should the project manager do next to resolve this issue?", "options": ["A: Implement the change request to change the project management method", "B: Update the issue log with this issue", "C: Meet with the project sponsor to alert them of this concern", "D: Schedule a one-on-one discussion with this key stakeholder to understand their concern"], "answer": "D: Schedule a one-on-one discussion with this key stakeholder to understand their concern", "explanation": "Before taking any actions, the project manager should meet with the stakeholder to better understand what the concerns are about the methods." },
     { "question": "M2Q58: A project manager working on a construction project has received notification from the local safety authority that the working conditions for the workers may result in injuries. What should the project manager do in this situation?", "options": ["A: Immediately inform the sponsor about this situation", "B: Meet with the workers and inform them of the situation", "C: Call the safety authority and inform them you have fixed the issue", "D: Immediately stop the project until the situation has been fixed"], "answer": "D: Immediately stop the project until the situation has been fixed", "explanation": "Since this is a safety issue and may result in injuries, the best course of action would be to stop the project until the situation can be resolved. All other choices allow the project to continue operating." },
     { "question":"M2Q59: Match the following terms with their correct definitions.","options":["Limits the work in progress","Will be decomposed into the WBS","Organized by the product owner"],"answer":{"Limits the work in progress":"Kanban","Will be decomposed into the WBS":"Scope Statement","Organized by the product owner":"Product Backlog"},"explanation":"The correct answer is: Limits the work in progress → Kanban, Will be decomposed into the WBS → Scope Statement, Organized by the product owner → Product Backlog","isMatching":true},
-    { "question": "M2Q60: Match the motivation description to the theory. 1. Herzberg's Theory of Motivation 2. Theory X 3. Theory Y.", "options": ["A: Hygiene agents", "B: Micromanager", "C: Employees like working"], "answer": {"Herzberg's Theory of Motivation": "Hygiene agents", "Theory X": "Micromanager", "Theory Y": "Employees like working"}, "explanation": "The correct answer is: Herzberg's Theory of Motivation → Hygiene agents, Theory X → Micromanager, Theory Y → Employees like working", "isMatching": true }
+    { "question": "M2Q60: Match the motivation description to the theory. 1. Herzberg's Theory of Motivation 2. Theory X 3. Theory Y.", "options": ["Herzberg's Theory of Motivation", "Theory X", "Theory Y"], "answer": {"Herzberg's Theory of Motivation": "Hygiene agents", "Theory X": "Micromanager", "Theory Y": "Employees like working"}, "explanation": "The correct answer is: Herzberg's Theory of Motivation → Hygiene agents, Theory X → Micromanager, Theory Y → Employees like working", "isMatching": true }
 ];
 const mock3Data = [
     {"question":"M3Q1 A team member has unexpectedly been out for more than one week due to reasons that no one knows about. This length of absence has caused the critical path to increase by two weeks. What should the project manager do in this situation?","options":["Ask the functional manager to contact the team member to discuss the situation.","Call the team member to discuss the situation and identify solutions to the issue.","Have other team members work overtime to complete the unfinished work.","Immediately contact the PMO and hire a new team member."],"answer":"Call the team member to discuss the situation and identify solutions to the issue.","explanation":"The most appropriate response would be to first contact the team member to see if there is a major personal issue and then, if possible, to come up with solutions to these issues to get the team member back to work."},
@@ -548,12 +548,12 @@ const mock1impdata = [
   { "question": "Question 10: An agile software project is security-classified. The project requires external expertise and delivery to add a module based on machine learning. An approved supplier asks you to join the daily meeting with the supplier's Agile Team. However, your day is filled with internal meetings. Which of the following options should be used for the two teams to synchronize interactively but less frequently?", "options": ["A: Come out with a Common Electronic Kanban.", "B: Have iterations aligned with Common Retrospectives.", "C: Add a Scrum of Scrum Layer and execute it.", "D: Come up with a fishbowl window for each site."], "answer": "C: Add a Scrum of Scrum Layer and execute it.", "explanation": "The best option is Scrum of Scrums which allows both Teams to have their own Daily Meetings and have less frequent targeted meetings between them. The incorrect options are inappropriate because of low pertinence & frequency (retrospectives), security reasons (fishbowl) or lack of live interaction (Kanban)." },
   { "question": "Question 11: You are the Project Manager of XYZ firm. Your firm's Marketing Director is unhappy that the Agile Innovation Team is developing too many novelty products with very little business value. Which of the following actions should the Project Manager do to rectify the team's approach? (choose 2).", "options": ["A: Increase the story sizes to incorporate more valuable features.", "B: Survey end-users and rank the items in the Product Backlog according to the survey results (user value ranking).", "C: Instruct the team to undertake a training course in direct response marketing.", "D: Let the Marketing Director approve each story by adding a process.", "E: Tighten the value criteria in the Definition of Ready by working with the Product Owners."], "answer": "B: Survey end-users and rank the items in the Product Backlog according to the survey results (user value ranking)., E: Tighten the value criteria in the Definition of Ready by working with the Product Owners.", "explanation": "Out of all the options, Definition of Ready and User Value Ranking are the best options. The incorrect options are wrong because marketing comes after value, coming out with large stories is a bad practice, and approval of all stories is not agile." , "isMultipleChoice": true },
   { "question": "Question 12: You are the Head of Operations of a highly productive Agile Innovation Team. You have informed the Product Owner that the company is not getting a solid Return on Investment from the Team's work. How should the Product Owner address the problem?", "options": ["A: Run a Retrospective with the Project Manager and go ahead with Project Cancellation.", "B: Come out with Minimum Marketable Features and prioritize relevant backlog items.", "C: Lessen the number of team members as necessary to guarantee a positive ROI.", "D: Review the User Stories and prioritize relevant backlog items."], "answer": "B: Come out with Minimum Marketable Features and prioritize relevant backlog items.", "explanation": "The fastest way to get a return on investment is the frequent release of smaller incremental products. Minimum Marketable Features are ready for public launch and prioritizing them will help resolve the problem described in the question. Reducing the Team size would not allow accelerating value. Option D may help but you need to prioritize against a specific criteria, which is option B." },
-  { "question": "Question 13: You are managing a virtual team. Your team came up with the below burn-down chart. In the chart below, select the point where the project is behind schedule.", "options": ["A: A", "B: B", "C: C", "D: D"], "answer": "B: B", "explanation": "Clearly as per the diagram, the work remaining (Green Line) is more than the ideal work (Red Line) in option B." },
+  { "question": "Question 13: You are the Head of Operations of a highly productive Agile Innovation Team. You have informed the Product Owner that the company is not getting a solid Return on Investment from the Team's work. How should the Product Owner address the problem?(dublicate)", "options": ["A: Run a Retrospective with the Project Manager and go ahead with Project Cancellation.", "B: Come out with Minimum Marketable Features and prioritize relevant backlog items.", "C: Lessen the number of team members as necessary to guarantee a positive ROI.", "D: Review the User Stories and prioritize relevant backlog items."], "answer": "B: Come out with Minimum Marketable Features and prioritize relevant backlog items.", "explanation": "The fastest way to get a return on investment is the frequent release of smaller incremental products. Minimum Marketable Features are ready for public launch and prioritizing them will help resolve the problem described in the question. Reducing the Team size would not allow accelerating value. Option D may help but you need to prioritize against a specific criteria, which is option B." },
   { "question": "Question 14: You are part of an efficient, empowered Agile Innovation Team. You and your team don't understand why the required approvals from the legal department are allowed to delay your team's progress. You approach your Product Owner in this regard who replies that the approvals are needed to check for existing patents that can block the team's product from going to market. Which of the following options reveal how such conflicts could be prevented?", "options": ["A: Work with Senior Management to make sure the Product Owner explains to the team the rationale behind the requirement workflow.", "B: Require the team to move a story to the Blocked Items in the Kanban Board based on their concerns about progress.", "C: Mandate that supporting department stakeholders are present in the daily progress to report progress from time to time.", "D: Make sure that the Product Owner can easily be approached to help answer the team's concerns and queries."], "answer": "D: Make sure that the Product Owner can easily be approached to help answer the team's concerns and queries.", "explanation": "Lack of Communication, as well as Inaction to prevent delay, is causing the conflict. Ensuring constant communication between the team and Product Owner is the most comprehensive response. The incorrect options happen to be inefficient (blocked column), unrealistic (daily meetings) or Incomplete (rationale for refinement)." },
   { "question": "Question 15: Mary is in-charge of an Apparel Brand. There has been an increase of complaints on social networks about her brand's drop in quality. Mary is determined to place product quality above all considerations and with this mission in mind, she helps set up a new Agile Innovation Team. Which of the following methods would be most effective to help achieve the team's goals?", "options": ["A: Eliminate human error by creating an automated testing bench.", "B: Introduce User Focus group inputs in the development life cycle of the product.", "C: Come up with features that help benchmark against competitor products.", "D: Fund the use of better quality materials by raising the product price."], "answer": "B: Introduce User Focus group inputs in the development life cycle of the product.", "explanation": "The most important aspect to determine the target is receiving continuous user input. The Incorrect options don't include user inputs as a valid means to address gaps." },
   { "question": "Question 16: You are the Project Manager of an Agile Development Team. To remove a significant blocker your Team comes out with a workaround. The Team's output dramatically increases over the next two iterations. However, at the third iteration, the Product Owner strongly disagrees with the workaround and asks your team to come up with a better solution and redo the work. Which of the following is the best solution to prevent such situations?", "options": ["A: Regularly engage with the Product Owner and run Catch-up meetings when necessary.", "B: Help the team focus by offloading all work on Improving Team Impediments.", "C: Ask the Product Owner for additional funding for the re-work due to the lack of collaboration with your team.", "D: Update the team charter with the revised ground rules and correct deviations as early as possible."], "answer": "A: Regularly engage with the Product Owner and run Catch-up meetings when necessary.", "explanation": "The ultimate authority of product scope rests with the Product Owner. Hence the Product Owner's engagement is critical when considering any scope changes. The incorrect options either violate the Agile principles (full offload) or are unrealistic (extra funding). Updating the team charter may help, but a better choice is to make sure the Product Owner is regularly engaged." },
   { "question": "Question 17: You are part of an Agile Team which is composed of highly skilled Product Design Engineers. The Design Engineers have earned new duties based on their reputation for quality and speed. However, in this role, the team's output has dropped steeply compared to their design work. Which of the following measures are most effective to improve the team's productivity in the present scenario? (choose 2)", "options": ["A: Come out with a Creativity Spike in the next iteration.", "B: Increase the team's motivation with a team building event.", "C: Get help from the creative thinkers on your team.", "D: Recruit more T-shaped profiles into the team.", "E: Extend the iterations to adjust for the new tasks."], "answer": "A: Come out with a Creativity Spike in the next iteration., D: Recruit more T-shaped profiles into the team.", "explanation": "Having diverse skills in play is the best option as Specialists keep getting thrown out of their comfort zones. The incorrect options do not address the problem of specialization." , "isMultipleChoice": true },
-  { "question": "Question 18: Your company is transitioning from a waterfall/predictive model to a hybrid model and you are in charge of leading this effort. Multiple projects will continue in predictive model, few will be following pure agile, and a few will be following hybrid methodology. Match each of the following terminologies/scenarios with the correct scenarios/definitions.", "options": ["A: Requirements are predefined.", "B: Changes follow change control process", "C: Requirements are not necessarily pre-defined", "D: Embrace change"], "answer":{"A: Requirements are predefined": "Scope in predictive.", "B: Changes follow change control process": "Changes in predictive.", "C: Requirements are not necessarily pre-defined": "Scope in agile.", "D: Embrace change": "Changes in agile."}, "explanation":  "The question is asking about how scope/changes are managed in predictive and agile projects. Clearly scope is well defined in predictive, and in agile it is not necessary for requirements to be fixed. On the same lines, agile methodology embrace changes and in predictive, it follows the integrated change control process. The correct matching is: [Requirements are predefined -> Scope in predictive.], [Changes follow change control process -> Changes in predictive.], [Requirements are not necessarily pre-defined -> Scope in agile.], [Embrace change -> Changes in agile.]", "isMatching": true },
+  { "question": "Question 18: Your company is transitioning from a waterfall/predictive model to a hybrid model and you are in charge of leading this effort. Multiple projects will continue in predictive model, few will be following pure agile, and a few will be following hybrid methodology. Match each of the following terminologies/scenarios with the correct scenarios/definitions.", "options": ["A: Requirements are predefined.", "B: Changes follow change control process", "C: Requirements are not necessarily pre-defined", "D: Embrace change"], "answer":{"A: Requirements are predefined.": "Scope in predictive.", "B: Changes follow change control process": "Changes in predictive.", "C: Requirements are not necessarily pre-defined": "Scope in agile.", "D: Embrace change": "Changes in agile."}, "explanation":  "The question is asking about how scope/changes are managed in predictive and agile projects. Clearly scope is well defined in predictive, and in agile it is not necessary for requirements to be fixed. On the same lines, agile methodology embrace changes and in predictive, it follows the integrated change control process. The correct matching is: [Requirements are predefined -> Scope in predictive.], [Changes follow change control process -> Changes in predictive.], [Requirements are not necessarily pre-defined -> Scope in agile.], [Embrace change -> Changes in agile.]", "isMatching": true },
   { "question": "Question 19: It's been almost 1 year since your organization transitioned to a hybrid model. The Program Manager complains to you (the Project Manager) that your project is not doing well as compared to other projects in the PMO. What can you do to improve the performance before the next couple of sprints?", "options": ["A: Discuss with the Product Owner in the sprint review meeting.", "B: Initiate the conversation in the daily stand up meeting.", "C: Find out the root cause in the sprint retrospective session.", "D: Use team building activities to motivate the team."], "answer": "C: Find out the root cause in the sprint retrospective session.", "explanation": "Having diverse skills in play is the best option as Specialists keep getting thrown out of their comfort zones. The incorrect options do not address the problem of specialization." },
   { "question": "Question 20: As an Agile Project Manager, you are ensuring that all User Stories are completed on schedule and all tests are passed. However, the Customer does not consider the product a success. Which of the following is the most effective way to prevent this outcome in the projects to follow?", "options": ["A: Obtain customer feedback on incremental release demos and user tests.", "B: Make sure that the test plan incorporates non-functional requirements in the backlog.", "C: Before developing the Product Backlog, ensure that the product vision is approved by the customer.", "D: Come up with an agreement with the customer on the success criteria of the product."], "answer": "A: Obtain customer feedback on incremental release demos and user tests.", "explanation": "The best way to ensure that the product addresses identified and non-identified needs throughout the product development is by getting continuous and incremental feedback from the Customer. The incorrect options are wrong because the product vision and success criteria do not address the non-expressed requirements, also non-functional requirements must always be included. It is not mentioned anywhere that non-functional requirements were not completed so we cannot assume that." },
   { "question": "Question 21: Competitors with new Business Models are causing a Company to lose its market share. To recommend ways to recover market share, a cross-functional Agile Team has been constituted. Which of the following ways talk about how the Team can increase their chance of coming up with successful recommendations?", "options": ["A: Understand and focus on the value consumers seek and the value competitors offer.", "B: Come out with an understanding of how competitors' business models can reach more consumers at a lower cost.", "C: Make sure a representative from the legal team is involved in these discussions.", "D: Come up with a deeper understanding of why consumers are disappointed by the Company's Product."], "answer": "A: Understand and focus on the value consumers seek and the value competitors offer.", "explanation": "As per the first principle of Agile Manifesto, the highest priority should be \"to satisfy the customer through early and continuous delivery of valuable software\" The value that consumers attribute to the offerings help drive the markets. The incorrect options are wrong because they focus on market reach (competitors), lost business (disappointed consumers), involvement of legal team, or an uniformed push for innovation and profitability." },
@@ -865,7 +865,7 @@ const mock9Data = [
     { "question": "M9Q136 A project team is working on backlog items within a four-week sprint. Suddenly, a critical team member announces that they will unexpectedly be absent for one week, leaving ongoing tasks incomplete. What would be the most appropriate action for the project manager to take in this situation?", "options": ["Support a knowledge transfer between the team member who will be away and the other project team members.", "Add a temporary resource to the team to help increase velocity and complete the items for this sprint.", "Remove a few items from the current sprint after getting the approval of the product owner.", "Increase the sprint duration so the team can complete all the planned items and present them to the product owner."], "answer": "Remove a few items from the current sprint after getting the approval of the product owner.", "explanation": "The team's capacity for the sprint has been significantly reduced. The most appropriate agile response is to collaborate with the Product Owner to remove some work from the sprint backlog to match the team's new, lower capacity." },
     { "question": "M9Q137 An inexperienced project manager requires HR support for a project. The HR manager hired interns and sent them for training. However, the training did not deliver on the competency-based outcomes. The HR manager is not willing to accept the training costs because the training budget is exhausted. What should the project manager do to resolve the situation?", "options": ["Prepare clear training requirements for full-time staff and interns.", "Identify the competency gaps and collaborate with the HR manager for options.", "Communicate training and hiring requirements to the HR manager.", "Analyze the risk, update the risk register, and inform the HR manager."], "answer": "Identify the competency gaps and collaborate with the HR manager for options.", "explanation": "This is a shared problem. The PM should work collaboratively with the HR manager to identify the specific competency gaps that still exist and explore alternative options to address them, given the budget constraints." },
     { "question": "M9Q138 A project is nearing completion and a stakeholder wants to know how the project outcomes will impact the organization. What should the project manager review with the stakeholder?", "options": ["Business case", "Benefits management plan", "Project charter", "Assumption log"], "answer": "Benefits management plan", "explanation": "The benefits management plan is the specific document that describes how and when the benefits of the project will be delivered and measured. It directly answers the stakeholder's question about the project's impact." },
-    { "question": "M9Q139 Project team A is launching a complex program in collaboration with project teams B, C, and D. What should be the priority for project team A's project manager during the early stages of the project?", "options": ["Host a team-building event with members from project teams A, B, C, and D.", "Include a metrics dashboard for project teams B, C, and D.", "Establish the same priorities as those of project teams B, C, and D.", "Ask project teams A, B, C, and D to identify critical dependencies, risks, and major milestones"], "answer": "Ask project teams A, B, C, and D to identify critical dependencies, risks, and major milestones.", "explanation": "In a multi-team program, the highest priority at the start is to understand the interdependencies between the teams. Identifying dependencies, risks, and shared milestones is crucial for effective coordination." },
+    { "question": "M9Q139 Project team A is launching a complex program in collaboration with project teams B, C, and D. What should be the priority for project team A's project manager during the early stages of the project?", "options": ["Host a team-building event with members from project teams A, B, C, and D.", "Include a metrics dashboard for project teams B, C, and D.", "Establish the same priorities as those of project teams B, C, and D.", "Ask project teams A, B, C, and D to identify critical dependencies, risks, and major milestones."], "answer": "Ask project teams A, B, C, and D to identify critical dependencies, risks, and major milestones.", "explanation": "In a multi-team program, the highest priority at the start is to understand the interdependencies between the teams. Identifying dependencies, risks, and shared milestones is crucial for effective coordination." },
     { "question": "M9Q140 A company is transitioning from using a predictive approach to a hybrid predictive-agile project implementation. The leadership team is concerned about benefits realization and is closely following up on one of the project iterations with the project manager. What should the project manager do in this situation?", "options": ["Update the leadership team with a quantifiable value report for each iteration.", "Demonstrate the business value to the leadership team and get their buy-in.", "Keep delivering iterations of the solution and show the benefit increments to the leadership team.", "Wait for the leadership team to share the benefits realization updates for each iteration with management."], "answer": "Keep delivering iterations of the solution and show the benefit increments to the leadership team.", "explanation": "The best way to address leadership's concerns is to demonstrate progress. By delivering working increments of the solution in each iteration, the PM provides tangible proof of the value being created, which builds trust and confidence." },
     { "question": "M9Q141 A geographically distributed project team has development issues between the colocated and virtual teams, causing productivity to decrease. What should the project manager do to address these issues?", "options": ["Force the team members to work from one location.", "Obtain special expertise to advise the team members.", "Develop protocols for resolving conflicts between team members.", "Set up face-to-face meetings with project team members."], "answer": "Develop protocols for resolving conflicts between team members.", "explanation": "The issues are causing conflict and impacting productivity. The PM should facilitate a session with the entire team to develop clear communication and conflict resolution protocols (ground rules) that are tailored to their distributed environment." },
     { "question": "M9Q142 A team is working in a highly regulated industry and the compliance department keeps pushing documentation and process steps that interfere with the team's desired way of working. Team frustration increases with the compliance department, and the team asks the project manager to intervene. What approach should the project manager take?", "options": ["Help the team understand that compliance is an important part of the overall success of the project and value creation.", "Push back on the compliance department and reduce the number of documents so the team can focus on value creation.", "Conduct a daily workshop to assess the compliance, and complete as much compliance work as possible in that timebox.", "Invite the compliance team to the daily standup meetings to avoid team resentment."], "answer": "Help the team understand that compliance is an important part of the overall success of the project and value creation.", "explanation": "The PM must act as a bridge between the team and the compliance department. The first step is to help the team understand that compliance is a non-negotiable requirement and part of delivering value, which can reduce frustration and set the stage for finding a better way to work together." },
@@ -925,9 +925,12 @@ const mock9Data = [
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let markedForReview = [];
+        let incorrectAnswers = [];
         let currentTestKey = '';
         let currentTestTitle = '';
         let testTimerInterval;
+        let isReviewMode = false;
+        let currentReviewIndex = 0;
         const PASSING_PERCENTAGE = 70;
 
         // --- LOCAL STORAGE FUNCTIONS ---
@@ -956,9 +959,9 @@ const mock9Data = [
             document.getElementById(pageId).classList.add('active-page');
             window.scrollTo(0, 0);
 
-            // Stop the timer if we navigate away from the test page
             if (pageId !== 'test-page') {
                 clearInterval(testTimerInterval);
+                isReviewMode = false;
             }
         }
 
@@ -967,15 +970,17 @@ const mock9Data = [
             const test = allTests[testIndex];
             if (!test.data || test.data.length === 0) return;
             
+            isReviewMode = false;
             currentQuizData = test.data;
             currentTestKey = test.key;
             currentTestTitle = test.title;
+            incorrectAnswers = [];
             
             document.getElementById('test-title').textContent = currentTestTitle;
             
             loadStateFromStorage();
             renderQuestion(currentQuestionIndex);
-            startTimer(120); // Start a 10-minute timer for the short test
+            startTimer(90);
             showPage('test-page');
         }
 
@@ -1009,13 +1014,6 @@ const mock9Data = [
             reviewButton.onclick = () => toggleReview(index);
             questionActions.appendChild(reviewButton);
 
-            const emailButton = document.createElement('a');
-            emailButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>`;
-            emailButton.className = 'p-2 rounded-full bg-gray-200 text-gray-600 hover:bg-blue-200 transition';
-            emailButton.title = 'Email about this question';
-            emailButton.href = `mailto:r.r.com1@gmail.com?subject=Query about ${currentTestTitle} - Question ${index + 1}&body=I have a question about the following:%0D%0A%0D%0A"${encodeURIComponent(data.question)}"`;
-            questionActions.appendChild(emailButton);
-
             questionHeaderContainer.appendChild(questionActions);
             card.appendChild(questionHeaderContainer);
 
@@ -1023,8 +1021,8 @@ const mock9Data = [
             optionsContainer.className = 'space-y-3';
             optionsContainer.id = `options-q${index}`;
             
-             if (data.isMatching) {
-                const descriptions = data.options;
+            if (data.isMatching) {
+                const descriptions = Object.keys(data.answer); // FIXED: Use keys from answer object
                 const terms = Object.values(data.answer);
                 
                 descriptions.forEach((desc) => {
@@ -1122,41 +1120,69 @@ const mock9Data = [
             navContainer.innerHTML = '';
             const btnBaseClass = 'px-6 py-2 border text-base font-medium rounded-md shadow-sm transition';
 
-            const prevButton = document.createElement('button');
-            prevButton.textContent = '← Previous';
-            prevButton.onclick = () => navigate(-1);
-            prevButton.className = `${btnBaseClass} border-gray-300 bg-white text-gray-700 hover:bg-gray-50`;
-            if (currentQuestionIndex === 0) {
-                prevButton.disabled = true;
-                prevButton.classList.add('opacity-50', 'cursor-not-allowed');
-            }
-            navContainer.appendChild(prevButton);
+            if (isReviewMode) {
+                const prevButton = document.createElement('button');
+                prevButton.textContent = '← Previous Incorrect';
+                prevButton.onclick = () => navigateReview(-1);
+                prevButton.className = `${btnBaseClass} border-gray-300 bg-white text-gray-700 hover:bg-gray-50`;
+                if (currentReviewIndex === 0) {
+                    prevButton.disabled = true;
+                    prevButton.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+                navContainer.appendChild(prevButton);
 
-            if (markedForReview.length > 0) {
-                const reviewButton = document.createElement('button');
-                reviewButton.textContent = `View Reviewed (${markedForReview.length})`;
-                reviewButton.onclick = toggleReviewList;
-                reviewButton.className = `${btnBaseClass} border-transparent text-white bg-yellow-500 hover:bg-yellow-600`;
-                navContainer.appendChild(reviewButton);
-            }
+                const exitButton = document.createElement('button');
+                exitButton.textContent = 'Exit Review';
+                exitButton.onclick = () => showPage('results-page');
+                exitButton.className = `${btnBaseClass} border-transparent text-white bg-gray-500 hover:bg-gray-600`;
+                navContainer.appendChild(exitButton);
 
-            const nextButton = document.createElement('button');
-            if (currentQuestionIndex === currentQuizData.length - 1) {
-                nextButton.textContent = 'Finish Test';
-                nextButton.className = `${btnBaseClass} border-transparent text-white bg-green-600 hover:bg-green-700`;
-                nextButton.onclick = calculateAndShowResults;
-            } else {
-                nextButton.textContent = 'Next →';
+                const nextButton = document.createElement('button');
+                nextButton.textContent = 'Next Incorrect →';
+                nextButton.onclick = () => navigateReview(1);
                 nextButton.className = `${btnBaseClass} border-transparent text-white bg-indigo-600 hover:bg-indigo-700`;
-                nextButton.onclick = () => navigate(1);
+                if (currentReviewIndex === incorrectAnswers.length - 1) {
+                    nextButton.disabled = true;
+                    nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+                navContainer.appendChild(nextButton);
+                
+            } else {
+                const prevButton = document.createElement('button');
+                prevButton.textContent = '← Previous';
+                prevButton.onclick = () => navigate(-1);
+                prevButton.className = `${btnBaseClass} border-gray-300 bg-white text-gray-700 hover:bg-gray-50`;
+                if (currentQuestionIndex === 0) {
+                    prevButton.disabled = true;
+                    prevButton.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+                navContainer.appendChild(prevButton);
+
+                if (markedForReview.length > 0) {
+                    const reviewButton = document.createElement('button');
+                    reviewButton.textContent = `View Reviewed (${markedForReview.length})`;
+                    reviewButton.onclick = toggleReviewList;
+                    reviewButton.className = `${btnBaseClass} border-transparent text-white bg-yellow-500 hover:bg-yellow-600`;
+                    navContainer.appendChild(reviewButton);
+                }
+
+                const nextButton = document.createElement('button');
+                if (currentQuestionIndex === currentQuizData.length - 1) {
+                    nextButton.textContent = 'Finish Test';
+                    nextButton.className = `${btnBaseClass} border-transparent text-white bg-green-600 hover:bg-green-700`;
+                    nextButton.onclick = calculateAndShowResults;
+                } else {
+                    nextButton.textContent = 'Next →';
+                    nextButton.className = `${btnBaseClass} border-transparent text-white bg-indigo-600 hover:bg-indigo-700`;
+                    nextButton.onclick = () => navigate(1);
+                }
+                navContainer.appendChild(nextButton);
             }
-            navContainer.appendChild(nextButton);
             
             document.getElementById('question-counter').textContent = `Question ${currentQuestionIndex + 1} of ${currentQuizData.length}`;
         }
 
-        // --- NEW & UPDATED FUNCTIONS ---
-
+        // --- TIMER AND RESULTS ---
         function startTimer(durationInMinutes) {
             clearInterval(testTimerInterval);
             const timerDisplay = document.getElementById('timer-display');
@@ -1173,30 +1199,27 @@ const mock9Data = [
 
                 if (--timer < 0) {
                     clearInterval(testTimerInterval);
-                    // Using a custom modal/alert in a real app would be better
-                    console.log("Time's up! Your test will now be submitted.");
                     calculateAndShowResults();
                 }
             }, 1000);
         }
 
         function calculateAndShowResults() {
-            clearInterval(testTimerInterval); // Stop the timer
-            let correct = 0;
-            let incorrect = 0;
-            let unanswered = 0;
+            clearInterval(testTimerInterval);
+            let correct = 0, incorrect = 0, unanswered = 0;
+            incorrectAnswers = [];
 
             userAnswers.forEach((answer, index) => {
                 if (answer === null || (Array.isArray(answer) && answer.length === 0) || (typeof answer === 'object' && answer !== null && Object.keys(answer).length === 0)) {
                     unanswered++;
                     return;
                 }
-                
                 const questionData = currentQuizData[index];
                 let isCorrect = false;
-
+                
                 if (questionData.isMatching) {
-                    isCorrect = Object.keys(questionData.answer).every(key => answer[key] === questionData.answer[key]);
+                    isCorrect = Object.keys(questionData.answer).length === Object.keys(answer || {}).length && 
+                                Object.keys(questionData.answer).every(key => answer[key] === questionData.answer[key]);
                 } else if (questionData.isMultipleChoice) {
                     const correctAnswers = new Set(questionData.answer);
                     const userAnswersSet = new Set(answer);
@@ -1205,14 +1228,30 @@ const mock9Data = [
                     isCorrect = answer === questionData.answer;
                 }
 
-                if (isCorrect) correct++;
-                else incorrect++;
+                if (isCorrect) {
+                    correct++;
+                } else {
+                    incorrect++;
+                    incorrectAnswers.push(index);
+                }
             });
 
             const total = currentQuizData.length;
             const score = total > 0 ? (correct / total) * 100 : 0;
             const passed = score >= PASSING_PERCENTAGE;
             const currentTestIndex = allTests.findIndex(t => t.key === currentTestKey);
+
+            let reviewHtml = '';
+            if (incorrectAnswers.length > 0) {
+                reviewHtml = `
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800">Review Your Incorrect Answers:</h3>
+                        <div class="mt-4 flex flex-wrap gap-2 justify-center">
+                            ${incorrectAnswers.map(qIndex => `<button onclick="reviewIncorrectQuestion(${qIndex})" class="w-12 h-12 rounded-md bg-red-100 hover:bg-red-200 font-semibold text-red-800">${qIndex + 1}</button>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
 
             const resultsContainer = document.getElementById('results-page');
             resultsContainer.innerHTML = `
@@ -1221,22 +1260,12 @@ const mock9Data = [
                     <div class="mt-8 text-6xl font-bold ${passed ? 'text-green-500' : 'text-red-500'}">${score.toFixed(1)}%</div>
                     <p class="text-2xl font-semibold mt-2">${passed ? 'Congratulations, you passed!' : 'Keep practicing!'}</p>
                     <p class="text-gray-600">Passing score: ${PASSING_PERCENTAGE}%</p>
-
                     <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-lg">
-                        <div class="bg-green-100 p-4 rounded-lg">
-                            <div class="font-bold text-3xl text-green-700">${correct}</div>
-                            <div class="text-green-800">Correct</div>
-                        </div>
-                        <div class="bg-red-100 p-4 rounded-lg">
-                            <div class="font-bold text-3xl text-red-700">${incorrect}</div>
-                            <div class="text-red-800">Incorrect</div>
-                        </div>
-                        <div class="bg-gray-200 p-4 rounded-lg">
-                            <div class="font-bold text-3xl text-gray-700">${unanswered}</div>
-                            <div class="text-gray-800">Not Attempted</div>
-                        </div>
+                        <div class="bg-green-100 p-4 rounded-lg"><div class="font-bold text-3xl text-green-700">${correct}</div><div class="text-green-800">Correct</div></div>
+                        <div class="bg-red-100 p-4 rounded-lg"><div class="font-bold text-3xl text-red-700">${incorrect}</div><div class="text-red-800">Incorrect</div></div>
+                        <div class="bg-gray-200 p-4 rounded-lg"><div class="font-bold text-3xl text-gray-700">${unanswered}</div><div class="text-gray-800">Not Attempted</div></div>
                     </div>
-                    
+                    ${reviewHtml}
                     <div class="mt-12 flex justify-center space-x-4">
                         <button onclick="showPage('home-page')" class="px-8 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50">Back to Home</button>
                         <button onclick="retryTest(${currentTestIndex})" class="px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">Retry Test</button>
@@ -1245,30 +1274,34 @@ const mock9Data = [
             `;
             showPage('results-page');
         }
+        
+        function reviewIncorrectQuestion(index) {
+            isReviewMode = true;
+            currentReviewIndex = incorrectAnswers.indexOf(index);
+            currentQuestionIndex = index;
+            showPage('test-page');
+            renderQuestion(index);
+        }
 
         function retryTest(testIndex) {
             const testToRetry = allTests[testIndex];
             if (!testToRetry) return;
-
             const testKey = testToRetry.key;
             localStorage.removeItem(`${testKey}-answers`);
             localStorage.removeItem(`${testKey}-review`);
             localStorage.removeItem(`${testKey}-index`);
-
-            // Now start the test fresh
             startTest(testIndex);
         }
 
         function toggleReview(index) {
             const reviewIndex = markedForReview.indexOf(index);
-            if (reviewIndex > -1) {
-                markedForReview.splice(reviewIndex, 1);
-            } else {
+            if (reviewIndex > -1) markedForReview.splice(reviewIndex, 1);
+            else {
                 markedForReview.push(index);
                 markedForReview.sort((a, b) => a - b);
             }
             saveStateToStorage();
-            renderQuestion(index); // Re-render to update button style
+            renderQuestion(index);
         }
 
         function toggleReviewList() {
@@ -1286,10 +1319,7 @@ const mock9Data = [
                 const link = document.createElement('button');
                 link.textContent = qIndex + 1;
                 link.className = 'w-10 h-10 rounded-md bg-yellow-200 hover:bg-yellow-300 font-semibold text-yellow-800';
-                link.onclick = () => {
-                    currentQuestionIndex = qIndex;
-                    renderQuestion(qIndex);
-                };
+                link.onclick = () => { currentQuestionIndex = qIndex; renderQuestion(qIndex); };
                 links.appendChild(link);
             });
             list.appendChild(links);
@@ -1300,16 +1330,13 @@ const mock9Data = [
             const container = document.getElementById('test-cards-container');
             container.innerHTML = '';
             allTests.forEach((test, index) => {
-                const isComingSoon = test.data.length === 0;
                 const card = document.createElement('div');
-                card.className = `border border-t-4 border-t-${test.color}-500 rounded-xl p-6 bg-white hover:shadow-xl transition-all flex flex-col ${isComingSoon ? 'opacity-60' : ''}`;
+                card.className = `border border-t-4 border-t-${test.color}-500 rounded-xl p-6 bg-white hover:shadow-xl transition-all flex flex-col`;
                 card.innerHTML = `
                     <h3 class="text-xl font-semibold text-gray-900">${test.title}</h3>
-                    <p class="text-gray-600 mt-2 flex-grow">${isComingSoon ? 'New questions coming soon!' : `${test.data.length} realistic PMP scenarios.`}</p>
-                    <button onclick="startTest(${index})" 
-                            class="mt-4 w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-${test.color}-600 hover:bg-${test.color}-700 ${isComingSoon ? 'cursor-not-allowed bg-gray-400 hover:bg-gray-400' : ''}"
-                            ${isComingSoon ? 'disabled' : ''}>
-                        ${isComingSoon ? 'Coming Soon' : 'Start Test'}
+                    <p class="text-gray-600 mt-2 flex-grow">${test.data.length} realistic PMP scenarios.</p>
+                    <button onclick="startTest(${index})" class="mt-4 w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-${test.color}-600 hover:bg-${test.color}-700">
+                        Start Test
                     </button>
                 `;
                 container.appendChild(card);
@@ -1327,15 +1354,20 @@ const mock9Data = [
             saveStateToStorage();
             renderQuestion(currentQuestionIndex);
         }
+        
+        function navigateReview(direction) {
+            currentReviewIndex += direction;
+            const newQuestionIndex = incorrectAnswers[currentReviewIndex];
+            currentQuestionIndex = newQuestionIndex;
+            renderQuestion(newQuestionIndex);
+        }
 
         function enableCheckButton(index) {
             document.getElementById(`check-btn-${index}`).disabled = false;
         }
 
         function processAnswer(index, isRestoring = false) {
-            if (!isRestoring) {
-                saveStateToStorage();
-            }
+            if (!isRestoring) saveStateToStorage();
             const data = currentQuizData[index];
             const optionsContainer = document.getElementById(`options-q${index}`);
             const explanationContainer = document.getElementById(`explanation-q${index}`);
@@ -1389,10 +1421,5 @@ const mock9Data = [
         }
 
     </script>
-	        <!-- Footer -->
-        <footer class="text-center mt-16 text-gray-500">
-            <p>&copy; 2025 PMP Mindset Guide. All rights reserved.</p>
-            <p class="text-sm mt-2">This guide is for educational purposes and is not affiliated with PMI.</p>
-        </footer>
 </body>
 </html>
